@@ -21,6 +21,12 @@ struct IsNonoverloadedFunctionObject<FO>
     static constexpr bool value {true};
 };
 
+template<typename FO>
+constexpr bool IsNonoverloadedFunctionObject_v
+{
+    requires {&FO::operator();}
+};
+
 }}
 /******************************************************************************************************/
 

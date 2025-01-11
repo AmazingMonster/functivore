@@ -28,11 +28,12 @@ template <typename F>
 struct IsRvalueReference
 {
     static constexpr bool value
-    { CONCEPTRODON_NUCLEOLUS_RVALUE_REFERENCE_FLAG & Analyzer<F>::value };
+    { static_cast<bool>(CONCEPTRODON_NUCLEOLUS_RVALUE_REFERENCE_FLAG & Analyzer<F>::value) };
 };
 
 template <typename F>
-constexpr bool IsRvalue_reference_v = IsRvalueReference<F>::value;
+constexpr bool IsRvalueReference_v
+{ static_cast<bool>(CONCEPTRODON_NUCLEOLUS_RVALUE_REFERENCE_FLAG & Analyzer<F>::value) };
 
 }}
 /******************************************************************************************************/

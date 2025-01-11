@@ -28,11 +28,12 @@ template <typename F>
 struct IsVolatile
 {
     static constexpr bool value
-    { CONCEPTRODON_NUCLEOLUS_VOLATILE_FLAG & Analyzer<F>::value };
+    { static_cast<bool>(CONCEPTRODON_NUCLEOLUS_VOLATILE_FLAG & Analyzer<F>::value) };
 };
 
 template <typename F>
-constexpr bool IsVolatile_v = IsVolatile<F>::value;
+constexpr bool IsVolatile_v
+{ static_cast<bool>(CONCEPTRODON_NUCLEOLUS_VOLATILE_FLAG & Analyzer<F>::value) };
 
 }}
 /******************************************************************************************************/

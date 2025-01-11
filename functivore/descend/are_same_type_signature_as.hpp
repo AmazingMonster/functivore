@@ -1,8 +1,8 @@
 // Copyright 2025 Feng Mofan
 // SPDX-License-Identifier: Apache-2.0
 
-#ifndef CONCEPTRODON_FUNCTIVORE_ARE_SAME_SIGNATURE_AS_H
-#define CONCEPTRODON_FUNCTIVORE_ARE_SAME_SIGNATURE_AS_H
+#ifndef CONCEPTRODON_FUNCTIVORE_ARE_SAME_TYPE_SIGNATURE_AS_H
+#define CONCEPTRODON_FUNCTIVORE_ARE_SAME_TYPE_SIGNATURE_AS_H
 
 #include "functivore/analyzer.hpp"
 #include <type_traits>
@@ -12,7 +12,7 @@ namespace Conceptrodon {
 namespace Functivore {
 
 template <typename Known>
-struct AreSameSignatureAs
+struct AreSameTypeSignatureAs
 {
     template<typename...Unknowns>
     struct ProtoMold

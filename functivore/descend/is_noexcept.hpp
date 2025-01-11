@@ -28,11 +28,12 @@ template <typename F>
 struct IsNoexcept
 {
     static constexpr bool value
-    { CONCEPTRODON_NUCLEOLUS_NOEXCEPT_FLAG & Analyzer<F>::value };
+    { static_cast<bool>(CONCEPTRODON_NUCLEOLUS_NOEXCEPT_FLAG & Analyzer<F>::value) };
 };
 
 template <typename F>
-constexpr bool IsNoexcept_v = IsNoexcept<F>::value;
+constexpr bool IsNoexcept_v
+{ static_cast<bool>(CONCEPTRODON_NUCLEOLUS_NOEXCEPT_FLAG & Analyzer<F>::value) };
 
 }}
 /******************************************************************************************************/

@@ -28,11 +28,12 @@ template <typename F>
 struct IsConst
 {
     static constexpr bool value
-    { CONCEPTRODON_NUCLEOLUS_CONST_FLAG & Analyzer<F>::value };
+    { static_cast<bool>(CONCEPTRODON_NUCLEOLUS_CONST_FLAG & Analyzer<F>::value) };
 };
 
 template <typename F>
-constexpr bool IsConst_v = IsConst<F>::value;
+constexpr bool IsConst_v
+{ static_cast<bool>(CONCEPTRODON_NUCLEOLUS_CONST_FLAG & Analyzer<F>::value) };
 
 }}
 /******************************************************************************************************/

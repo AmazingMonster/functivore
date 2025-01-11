@@ -68,33 +68,33 @@
 namespace Conceptrodon {
 namespace Functivore {
 
-template<typename Type>
-struct Analyzer {};
+template<typename Fn>
+struct Analyzer: public Functilis::AnalyzerPrototype<Fn> {};
 
 template<typename Fn>
 struct Analyzer<Fn*>
-: public Analyzer<Fn>
+: public Functilis::AnalyzerPrototype<Fn>
 {
     static constexpr CONCEPTRODON_NUCLEOLUS_FLAG_TYPE value
     {
         CONCEPTRODON_NUCLEOLUS_FUNCTION_POINTER_FLAG |
         (
             CONCEPTRODON_NUCLEOLUS_FUNCTION_FLAG ^
-            Functilis::FunctionAnalyzer<Fn>::value
+            Functilis::AnalyzerPrototype<Fn>::value
         )
     };
 };
 
 template<typename MemFn, typename Structure>
 struct Analyzer<MemFn Structure::*>
-: public Functilis::FunctionAnalyzer<MemFn>
+: public Functilis::AnalyzerPrototype<MemFn>
 {
     static constexpr CONCEPTRODON_NUCLEOLUS_FLAG_TYPE value
     {
         CONCEPTRODON_NUCLEOLUS_POINTER_TO_MEMBER_FUNCTION_FLAG |
         (
             CONCEPTRODON_NUCLEOLUS_FUNCTION_FLAG ^
-            Functilis::FunctionAnalyzer<MemFn>::value
+            Functilis::AnalyzerPrototype<MemFn>::value
         )
     };
 
@@ -104,14 +104,14 @@ struct Analyzer<MemFn Structure::*>
 template<typename FO>
 requires requires {&FO::operator();}
 struct Analyzer<FO>
-: public Functilis::FunctionAnalyzer<decltype(FO::operator())>
+: public Analyzer<decltype(&FO::operator())>
 {
     static constexpr CONCEPTRODON_NUCLEOLUS_FLAG_TYPE value
     {
         CONCEPTRODON_NUCLEOLUS_FUNCTION_OBJECT_FLAG |
         (
-            CONCEPTRODON_NUCLEOLUS_FUNCTION_FLAG ^
-            Functilis::FunctionAnalyzer<decltype(FO::operator())>::value
+            CONCEPTRODON_NUCLEOLUS_POINTER_TO_MEMBER_FUNCTION_FLAG ^
+            Analyzer<decltype(&FO::operator())>::value
         )
     };
 
@@ -125,11 +125,11 @@ struct Analyzer<FO>
 
 
 /******************************************************************************************************/
-#include "functivore/microbiota/nucleolus/define_flags/flag_type.hpp"
-#include "functivore/microbiota/nucleolus/define_flags/function.hpp"
-#include "functivore/microbiota/nucleolus/define_flags/function_pointer.hpp"
-#include "functivore/microbiota/nucleolus/define_flags/pointer_to_member_function.hpp"
-#include "functivore/microbiota/nucleolus/define_flags/function_object.hpp"
+#include "functivore/microbiota/nucleolus/undef_flags/flag_type.hpp"
+#include "functivore/microbiota/nucleolus/undef_flags/function.hpp"
+#include "functivore/microbiota/nucleolus/undef_flags/function_pointer.hpp"
+#include "functivore/microbiota/nucleolus/undef_flags/pointer_to_member_function.hpp"
+#include "functivore/microbiota/nucleolus/undef_flags/function_object.hpp"
 /******************************************************************************************************/
 
 

@@ -13,7 +13,7 @@ namespace Functivore {
 template<typename>
 struct IsFunctionPointer
 {
-    static constexpr bool value {true};
+    static constexpr bool value {false};
 };
 
 template<typename FP>
@@ -21,6 +21,12 @@ struct IsFunctionPointer<FP*>
 {
     static constexpr bool value
     {std::is_function_v<FP>};
+};
+
+template<typename FP>
+constexpr bool IsFunctionPointer_v
+{
+    IsFunctionPointer<FP>::value
 };
 
 }}

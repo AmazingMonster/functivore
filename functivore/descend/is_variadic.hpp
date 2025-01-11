@@ -28,11 +28,12 @@ template <typename F>
 struct IsVariadic
 {
     static constexpr bool value
-    { CONCEPTRODON_NUCLEOLUS_VARIADIC_FLAG & Analyzer<F>::value };
+    { static_cast<bool>(CONCEPTRODON_NUCLEOLUS_VARIADIC_FLAG & Analyzer<F>::value) };
 };
 
 template <typename F>
-constexpr bool IsVariadic_v = IsVariadic<F>::value;
+constexpr bool IsVariadic_v
+{ static_cast<bool>(CONCEPTRODON_NUCLEOLUS_VARIADIC_FLAG & Analyzer<F>::value) };
 
 }}
 /******************************************************************************************************/

@@ -181,7 +181,7 @@ PTMF = pointer to member function;
 #endif
 
 #define CONCEPTRODON_FUNCTILIS_ANALYZER_PROTOTYPE_FUNCTION_NAME \
-    FunctionAnalyzer
+    AnalyzerPrototype
 /******************************************************************************************************/
 
 
