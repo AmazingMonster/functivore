@@ -11,11 +11,25 @@ namespace Conceptrodon {
 namespace Functivore {
 
 template<typename Fn>
-struct TypicalGetParameterTypes
-{ using type = Analyzer<Fn>::parameter_types;};
+struct GetParameterTypes
+{ 
+    template<template<typename...> class, typename>
+    struct Detail {};
 
-template<typename...Args>
-using GetParameterTypes = TypicalGetParameterTypes<Args...>::type;
+    template
+    <
+        template<typename...> class Operation,
+        template<typename...> class Vessel,
+        typename...Args
+    >
+    struct Detail<Operation, Vessel<Args...>>
+    {
+        using type = Operation<Args...>; ;
+    };
+
+    template<template<typename...> class...Args>
+    using Road = Detail<Args..., typename Analyzer<Fn>::parameter_types>::type;
+};
 
 }}
 /******************************************************************************************************/

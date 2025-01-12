@@ -243,6 +243,18 @@ inline auto Lambda_4
 /******************************************************************************************************/
 static_assert
 (std::same_as<
+    Analyzer<decltype(fun_0)>::variadic_type_signature,
+    int(int, double)
+>);
+
+static_assert
+(std::same_as<
+    Analyzer<decltype(fun_0)>::type_signature,
+    int(int, double)
+>);
+
+static_assert
+(std::same_as<
     Analyzer<decltype(fun_0)>::result_type,
     int
 >);
@@ -266,6 +278,18 @@ static_assert
 
 /**** fun_1 ****/
 /******************************************************************************************************/
+static_assert
+(std::same_as<
+    Analyzer<decltype(fun_1)>::variadic_type_signature,
+    int(int, double...)
+>);
+
+static_assert
+(std::same_as<
+    Analyzer<decltype(fun_1)>::type_signature,
+    int(int, double)
+>);
+
 static_assert
 (std::same_as<
     Analyzer<decltype(fun_1)>::result_type,
@@ -292,6 +316,18 @@ static_assert
 
 /**** fun_2 ****/
 /******************************************************************************************************/
+static_assert
+(std::same_as<
+    Analyzer<decltype(fun_2)>::variadic_type_signature,
+    int(int, double...)
+>);
+
+static_assert
+(std::same_as<
+    Analyzer<decltype(fun_2)>::type_signature,
+    int(int, double)
+>);
+
 static_assert
 (std::same_as<
     Analyzer<decltype(fun_2)>::result_type,
@@ -326,6 +362,18 @@ static_assert
 /******************************************************************************************************/
 static_assert
 (std::same_as<
+    Analyzer<decltype(fun_3)>::variadic_type_signature,
+    int(int, double&...)
+>);
+
+static_assert
+(std::same_as<
+    Analyzer<decltype(fun_3)>::type_signature,
+    int(int, double&)
+>);
+
+static_assert
+(std::same_as<
     Analyzer<decltype(fun_3)>::result_type,
     int
 >);
@@ -358,6 +406,18 @@ static_assert
 /******************************************************************************************************/
 static_assert
 (std::same_as<
+    Analyzer<decltype(FunP_0)>::variadic_type_signature,
+    int(int, double)
+>);
+
+static_assert
+(std::same_as<
+    Analyzer<decltype(FunP_0)>::type_signature,
+    int(int, double)
+>);
+
+static_assert
+(std::same_as<
     Analyzer<decltype(FunP_0)>::result_type,
     int
 >);
@@ -387,6 +447,18 @@ static_assert
 
 /**** FunP_1 ****/
 /******************************************************************************************************/
+static_assert
+(std::same_as<
+    Analyzer<decltype(FunP_1)>::variadic_type_signature,
+    int(int, double...)
+>);
+
+static_assert
+(std::same_as<
+    Analyzer<decltype(FunP_1)>::type_signature,
+    int(int, double)
+>);
+
 static_assert
 (std::same_as<
     Analyzer<decltype(FunP_1)>::result_type,
@@ -422,6 +494,18 @@ static_assert
 /******************************************************************************************************/
 static_assert
 (std::same_as<
+    Analyzer<decltype(FunP_2)>::variadic_type_signature,
+    int(int, double...)
+>);
+
+static_assert
+(std::same_as<
+    Analyzer<decltype(FunP_2)>::type_signature,
+    int(int, double)
+>);
+
+static_assert
+(std::same_as<
     Analyzer<decltype(FunP_2)>::result_type,
     int
 >);
@@ -452,6 +536,18 @@ static_assert
 
 /**** FunP_3 ****/
 /******************************************************************************************************/
+static_assert
+(std::same_as<
+    Analyzer<decltype(FunP_3)>::variadic_type_signature,
+    int(int, double&...)
+>);
+
+static_assert
+(std::same_as<
+    Analyzer<decltype(FunP_3)>::type_signature,
+    int(int, double&)
+>);
+
 static_assert
 (std::same_as<
     Analyzer<decltype(FunP_3)>::result_type,
@@ -486,6 +582,18 @@ static_assert
 /******************************************************************************************************/
 static_assert
 (std::same_as<
+    Analyzer<decltype(FunAddr_0)>::variadic_type_signature,
+    int(int, double)
+>);
+
+static_assert
+(std::same_as<
+    Analyzer<decltype(FunAddr_0)>::type_signature,
+    int(int, double)
+>);
+
+static_assert
+(std::same_as<
     Analyzer<decltype(FunAddr_0)>::result_type,
     int
 >);
@@ -515,6 +623,18 @@ static_assert
 
 /**** FunAddr_1 ****/
 /******************************************************************************************************/
+static_assert
+(std::same_as<
+    Analyzer<decltype(FunAddr_1)>::variadic_type_signature,
+    int(int, double...)
+>);
+
+static_assert
+(std::same_as<
+    Analyzer<decltype(FunAddr_1)>::type_signature,
+    int(int, double)
+>);
+
 static_assert
 (std::same_as<
     Analyzer<decltype(FunAddr_1)>::result_type,
@@ -550,6 +670,18 @@ static_assert
 /******************************************************************************************************/
 static_assert
 (std::same_as<
+    Analyzer<decltype(FunAddr_2)>::variadic_type_signature,
+    int(int, double...)
+>);
+
+static_assert
+(std::same_as<
+    Analyzer<decltype(FunAddr_2)>::type_signature,
+    int(int, double)
+>);
+
+static_assert
+(std::same_as<
     Analyzer<decltype(FunAddr_2)>::result_type,
     int
 >);
@@ -583,6 +715,18 @@ static_assert
 /******************************************************************************************************/
 static_assert
 (std::same_as<
+    Analyzer<decltype(FunAddr_3)>::variadic_type_signature,
+    int(int, double&...)
+>);
+
+static_assert
+(std::same_as<
+    Analyzer<decltype(FunAddr_3)>::type_signature,
+    int(int, double&)
+>);
+
+static_assert
+(std::same_as<
     Analyzer<decltype(FunAddr_3)>::result_type,
     int
 >);
@@ -613,6 +757,18 @@ static_assert
 
 /**** Tester::fun_0 ****/
 /******************************************************************************************************/
+static_assert
+(std::same_as<
+    Analyzer<decltype(&Tester::fun_0)>::variadic_type_signature,
+    int(int, double)
+>);
+
+static_assert
+(std::same_as<
+    Analyzer<decltype(&Tester::fun_0)>::type_signature,
+    int(int, double)
+>);
+
 static_assert
 (std::same_as<
     Analyzer<decltype(&Tester::fun_0)>::result_type,
@@ -650,6 +806,18 @@ static_assert
 
 /**** Tester::fun_1 ****/
 /******************************************************************************************************/
+static_assert
+(std::same_as<
+    Analyzer<decltype(&Tester::fun_1)>::variadic_type_signature,
+    int(int, double...)
+>);
+
+static_assert
+(std::same_as<
+    Analyzer<decltype(&Tester::fun_1)>::type_signature,
+    int(int, double)
+>);
+
 static_assert
 (std::same_as<
     Analyzer<decltype(&Tester::fun_1)>::result_type,
@@ -690,6 +858,18 @@ static_assert
 /******************************************************************************************************/
 static_assert
 (std::same_as<
+    Analyzer<decltype(&Tester::fun_2)>::variadic_type_signature,
+    int(int, double...)
+>);
+
+static_assert
+(std::same_as<
+    Analyzer<decltype(&Tester::fun_2)>::type_signature,
+    int(int, double)
+>);
+
+static_assert
+(std::same_as<
     Analyzer<decltype(&Tester::fun_2)>::result_type,
     int
 >);
@@ -726,6 +906,18 @@ static_assert
 
 /**** Tester::fun_3 ****/
 /******************************************************************************************************/
+static_assert
+(std::same_as<
+    Analyzer<decltype(&Tester::fun_3)>::variadic_type_signature,
+    int(int, double&...)
+>);
+
+static_assert
+(std::same_as<
+    Analyzer<decltype(&Tester::fun_3)>::type_signature,
+    int(int, double&)
+>);
+
 static_assert
 (std::same_as<
     Analyzer<decltype(&Tester::fun_3)>::result_type,
@@ -766,6 +958,18 @@ static_assert
 /******************************************************************************************************/
 static_assert
 (std::same_as<
+    Analyzer<decltype(&Tester::gun_0)>::variadic_type_signature,
+    int(int, double&...)
+>);
+
+static_assert
+(std::same_as<
+    Analyzer<decltype(&Tester::gun_0)>::type_signature,
+    int(int, double&)
+>);
+
+static_assert
+(std::same_as<
     Analyzer<decltype(&Tester::gun_0)>::result_type,
     int
 >);
@@ -803,6 +1007,18 @@ static_assert
 
 /**** Tester::gun_1 ****/
 /******************************************************************************************************/
+static_assert
+(std::same_as<
+    Analyzer<decltype(&Tester::gun_1)>::variadic_type_signature,
+    int(int, double&...)
+>);
+
+static_assert
+(std::same_as<
+    Analyzer<decltype(&Tester::gun_1)>::type_signature,
+    int(int, double&)
+>);
+
 static_assert
 (std::same_as<
     Analyzer<decltype(&Tester::gun_1)>::result_type,
@@ -845,6 +1061,18 @@ static_assert
 /******************************************************************************************************/
 static_assert
 (std::same_as<
+    Analyzer<decltype(&Tester::gun_2)>::variadic_type_signature,
+    int(int, double&...)
+>);
+
+static_assert
+(std::same_as<
+    Analyzer<decltype(&Tester::gun_2)>::type_signature,
+    int(int, double&)
+>);
+
+static_assert
+(std::same_as<
     Analyzer<decltype(&Tester::gun_2)>::result_type,
     int
 >);
@@ -884,6 +1112,18 @@ static_assert
 
 /**** Tester::gun_3 ****/
 /******************************************************************************************************/
+static_assert
+(std::same_as<
+    Analyzer<decltype(&Tester::gun_3)>::variadic_type_signature,
+    int(int, double&...)
+>);
+
+static_assert
+(std::same_as<
+    Analyzer<decltype(&Tester::gun_3)>::type_signature,
+    int(int, double&)
+>);
+
 static_assert
 (std::same_as<
     Analyzer<decltype(&Tester::gun_3)>::result_type,
@@ -928,6 +1168,18 @@ static_assert
 /******************************************************************************************************/
 static_assert
 (std::same_as<
+    Analyzer<decltype(&Tester::gun_4)>::variadic_type_signature,
+    int(int, double&...)
+>);
+
+static_assert
+(std::same_as<
+    Analyzer<decltype(&Tester::gun_4)>::type_signature,
+    int(int, double&)
+>);
+
+static_assert
+(std::same_as<
     Analyzer<decltype(&Tester::gun_4)>::result_type,
     int
 >);
@@ -970,6 +1222,18 @@ static_assert
 /******************************************************************************************************/
 static_assert
 (std::same_as<
+    Analyzer<FO_0>::variadic_type_signature,
+    int(int, double)
+>);
+
+static_assert
+(std::same_as<
+    Analyzer<FO_0>::type_signature,
+    int(int, double)
+>);
+
+static_assert
+(std::same_as<
     Analyzer<FO_0>::result_type,
     int
 >);
@@ -1005,6 +1269,18 @@ static_assert
 
 /**** FO_1 ****/
 /******************************************************************************************************/
+static_assert
+(std::same_as<
+    Analyzer<FO_1>::variadic_type_signature,
+    int(int, double...)
+>);
+
+static_assert
+(std::same_as<
+    Analyzer<FO_1>::type_signature,
+    int(int, double)
+>);
+
 static_assert
 (std::same_as<
     Analyzer<FO_1>::result_type,
@@ -1045,6 +1321,18 @@ static_assert
 /******************************************************************************************************/
 static_assert
 (std::same_as<
+    Analyzer<FO_2>::variadic_type_signature,
+    int(int, double...)
+>);
+
+static_assert
+(std::same_as<
+    Analyzer<FO_2>::type_signature,
+    int(int, double)
+>);
+
+static_assert
+(std::same_as<
     Analyzer<FO_2>::result_type,
     int
 >);
@@ -1081,6 +1369,18 @@ static_assert
 
 /**** FO_3 ****/
 /******************************************************************************************************/
+static_assert
+(std::same_as<
+    Analyzer<FO_3>::variadic_type_signature,
+    int(int, double&...)
+>);
+
+static_assert
+(std::same_as<
+    Analyzer<FO_3>::type_signature,
+    int(int, double&)
+>);
+
 static_assert
 (std::same_as<
     Analyzer<FO_3>::result_type,
@@ -1121,6 +1421,18 @@ static_assert
 /******************************************************************************************************/
 static_assert
 (std::same_as<
+    Analyzer<FO_4>::variadic_type_signature,
+    int(int, double&...)
+>);
+
+static_assert
+(std::same_as<
+    Analyzer<FO_4>::type_signature,
+    int(int, double&)
+>);
+
+static_assert
+(std::same_as<
     Analyzer<FO_4>::result_type,
     int
 >);
@@ -1158,6 +1470,18 @@ static_assert
 
 /**** FO_5 ****/
 /******************************************************************************************************/
+static_assert
+(std::same_as<
+    Analyzer<FO_5>::variadic_type_signature,
+    int(int, double&...)
+>);
+
+static_assert
+(std::same_as<
+    Analyzer<FO_5>::type_signature,
+    int(int, double&)
+>);
+
 static_assert
 (std::same_as<
     Analyzer<FO_5>::result_type,
@@ -1200,6 +1524,18 @@ static_assert
 /******************************************************************************************************/
 static_assert
 (std::same_as<
+    Analyzer<FO_6>::variadic_type_signature,
+    int(int, double&...)
+>);
+
+static_assert
+(std::same_as<
+    Analyzer<FO_6>::type_signature,
+    int(int, double&)
+>);
+
+static_assert
+(std::same_as<
     Analyzer<FO_6>::result_type,
     int
 >);
@@ -1239,6 +1575,18 @@ static_assert
 
 /**** FO_7 ****/
 /******************************************************************************************************/
+static_assert
+(std::same_as<
+    Analyzer<FO_7>::variadic_type_signature,
+    int(int, double&...)
+>);
+
+static_assert
+(std::same_as<
+    Analyzer<FO_7>::type_signature,
+    int(int, double&)
+>);
+
 static_assert
 (std::same_as<
     Analyzer<FO_7>::result_type,
@@ -1283,6 +1631,18 @@ static_assert
 /******************************************************************************************************/
 static_assert
 (std::same_as<
+    Analyzer<FO_8>::variadic_type_signature,
+    int(int, double&...)
+>);
+
+static_assert
+(std::same_as<
+    Analyzer<FO_8>::type_signature,
+    int(int, double&)
+>);
+
+static_assert
+(std::same_as<
     Analyzer<FO_8>::result_type,
     int
 >);
@@ -1325,6 +1685,18 @@ static_assert
 /******************************************************************************************************/
 static_assert
 (std::same_as<
+    Analyzer<decltype(Lambda_0)>::variadic_type_signature,
+    int(int, double)
+>);
+
+static_assert
+(std::same_as<
+    Analyzer<decltype(Lambda_0)>::type_signature,
+    int(int, double)
+>);
+
+static_assert
+(std::same_as<
     Analyzer<decltype(Lambda_0)>::result_type,
     int
 >);
@@ -1361,6 +1733,18 @@ static_assert
 
 /**** Lambda_1 ****/
 /******************************************************************************************************/
+static_assert
+(std::same_as<
+    Analyzer<decltype(Lambda_1)>::variadic_type_signature,
+    int(int, double...)
+>);
+
+static_assert
+(std::same_as<
+    Analyzer<decltype(Lambda_1)>::type_signature,
+    int(int, double)
+>);
+
 static_assert
 (std::same_as<
     Analyzer<decltype(Lambda_1)>::result_type,
@@ -1402,6 +1786,18 @@ static_assert
 /******************************************************************************************************/
 static_assert
 (std::same_as<
+    Analyzer<decltype(Lambda_2)>::variadic_type_signature,
+    int(int, double...)
+>);
+
+static_assert
+(std::same_as<
+    Analyzer<decltype(Lambda_2)>::type_signature,
+    int(int, double)
+>);
+
+static_assert
+(std::same_as<
     Analyzer<decltype(Lambda_2)>::result_type,
     int
 >);
@@ -1441,6 +1837,18 @@ static_assert
 /******************************************************************************************************/
 static_assert
 (std::same_as<
+    Analyzer<decltype(Lambda_3)>::variadic_type_signature,
+    int(int, double&...)
+>);
+
+static_assert
+(std::same_as<
+    Analyzer<decltype(Lambda_3)>::type_signature,
+    int(int, double&)
+>);
+
+static_assert
+(std::same_as<
     Analyzer<decltype(Lambda_3)>::result_type,
     int
 >);
@@ -1478,6 +1886,30 @@ static_assert
 
 /**** Lambda_4 ****/
 /******************************************************************************************************/
+static_assert
+(std::same_as<
+    Analyzer<decltype(Lambda_4)>::variadic_type_signature,
+    int(int, double&...)
+>);
+
+static_assert
+(std::same_as<
+    Analyzer<decltype(Lambda_4)>::type_signature,
+    int(int, double&)
+>);
+
+static_assert
+(std::same_as<
+    Analyzer<decltype(Lambda_4)>::variadic_type_signature,
+    int(int, double&...)
+>);
+
+static_assert
+(std::same_as<
+    Analyzer<decltype(Lambda_4)>::type_signature,
+    int(int, double&)
+>);
+
 static_assert
 (std::same_as<
     Analyzer<decltype(Lambda_4)>::result_type,

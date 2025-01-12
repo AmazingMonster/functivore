@@ -130,41 +130,41 @@ inline auto Lambda_4
 
 
 /******************************************************************************************************/
-static_assert(std::same_as<GetParameterTypes<decltype(fun_0)>, Capsule<int, double>>);
-static_assert(std::same_as<GetParameterTypes<decltype(fun_1)>, Capsule<int, double>>);
-static_assert(std::same_as<GetParameterTypes<decltype(fun_2)>, Capsule<int, double>>);
-static_assert(std::same_as<GetParameterTypes<decltype(fun_3)>, Capsule<int, double&>>);
-static_assert(std::same_as<GetParameterTypes<decltype(FunP_0)>, Capsule<int, double>>);
-static_assert(std::same_as<GetParameterTypes<decltype(FunP_1)>, Capsule<int, double>>);
-static_assert(std::same_as<GetParameterTypes<decltype(FunP_2)>, Capsule<int, double>>);
-static_assert(std::same_as<GetParameterTypes<decltype(FunP_3)>, Capsule<int, double&>>);
-static_assert(std::same_as<GetParameterTypes<decltype(FunAddr_0)>, Capsule<int, double>>);
-static_assert(std::same_as<GetParameterTypes<decltype(FunAddr_1)>, Capsule<int, double>>);
-static_assert(std::same_as<GetParameterTypes<decltype(FunAddr_2)>, Capsule<int, double>>);
-static_assert(std::same_as<GetParameterTypes<decltype(FunAddr_3)>, Capsule<int, double&>>);
-static_assert(std::same_as<GetParameterTypes<decltype(&Tester::fun_0)>, Capsule<int, double>>);
-static_assert(std::same_as<GetParameterTypes<decltype(&Tester::fun_1)>, Capsule<int, double>>);
-static_assert(std::same_as<GetParameterTypes<decltype(&Tester::fun_2)>, Capsule<int, double>>);
-static_assert(std::same_as<GetParameterTypes<decltype(&Tester::fun_3)>, Capsule<int, double&>>);
-static_assert(std::same_as<GetParameterTypes<decltype(&Tester::gun_0)>, Capsule<int, double&>>);
-static_assert(std::same_as<GetParameterTypes<decltype(&Tester::gun_1)>, Capsule<int, double&>>);
-static_assert(std::same_as<GetParameterTypes<decltype(&Tester::gun_2)>, Capsule<int, double&>>);
-static_assert(std::same_as<GetParameterTypes<decltype(&Tester::gun_3)>, Capsule<int, double&>>);
-static_assert(std::same_as<GetParameterTypes<decltype(&Tester::gun_4)>, Capsule<int, double&>>);
-static_assert(std::same_as<GetParameterTypes<FO_0>, Capsule<int, double>>);
-static_assert(std::same_as<GetParameterTypes<FO_1>, Capsule<int, double>>);
-static_assert(std::same_as<GetParameterTypes<FO_2>, Capsule<int, double>>);
-static_assert(std::same_as<GetParameterTypes<FO_3>, Capsule<int, double&>>);
-static_assert(std::same_as<GetParameterTypes<FO_4>, Capsule<int, double&>>);
-static_assert(std::same_as<GetParameterTypes<FO_5>, Capsule<int, double&>>);
-static_assert(std::same_as<GetParameterTypes<FO_6>, Capsule<int, double&>>);
-static_assert(std::same_as<GetParameterTypes<FO_7>, Capsule<int, double&>>);
-static_assert(std::same_as<GetParameterTypes<FO_8>, Capsule<int, double&>>);
-static_assert(std::same_as<GetParameterTypes<decltype(Lambda_0)>, Capsule<int, double>>);
-static_assert(std::same_as<GetParameterTypes<decltype(Lambda_1)>, Capsule<int, double>>);
-static_assert(std::same_as<GetParameterTypes<decltype(Lambda_2)>, Capsule<int, double>>);
-static_assert(std::same_as<GetParameterTypes<decltype(Lambda_3)>, Capsule<int, double&>>);
-static_assert(std::same_as<GetParameterTypes<decltype(Lambda_4)>, Capsule<int, double&>>);
+static_assert(std::same_as<GetParameterTypes<decltype(fun_0)>::Road<Capsule>, Capsule<int, double>>);
+static_assert(std::same_as<GetParameterTypes<decltype(fun_1)>::Road<Capsule>, Capsule<int, double>>);
+static_assert(std::same_as<GetParameterTypes<decltype(fun_2)>::Road<Capsule>, Capsule<int, double>>);
+static_assert(std::same_as<GetParameterTypes<decltype(fun_3)>::Road<Capsule>, Capsule<int, double&>>);
+static_assert(std::same_as<GetParameterTypes<decltype(FunP_0)>::Road<Capsule>, Capsule<int, double>>);
+static_assert(std::same_as<GetParameterTypes<decltype(FunP_1)>::Road<Capsule>, Capsule<int, double>>);
+static_assert(std::same_as<GetParameterTypes<decltype(FunP_2)>::Road<Capsule>, Capsule<int, double>>);
+static_assert(std::same_as<GetParameterTypes<decltype(FunP_3)>::Road<Capsule>, Capsule<int, double&>>);
+static_assert(std::same_as<GetParameterTypes<decltype(FunAddr_0)>::Road<Capsule>, Capsule<int, double>>);
+static_assert(std::same_as<GetParameterTypes<decltype(FunAddr_1)>::Road<Capsule>, Capsule<int, double>>);
+static_assert(std::same_as<GetParameterTypes<decltype(FunAddr_2)>::Road<Capsule>, Capsule<int, double>>);
+static_assert(std::same_as<GetParameterTypes<decltype(FunAddr_3)>::Road<Capsule>, Capsule<int, double&>>);
+static_assert(std::same_as<GetParameterTypes<decltype(&Tester::fun_0)>::Road<Capsule>, Capsule<int, double>>);
+static_assert(std::same_as<GetParameterTypes<decltype(&Tester::fun_1)>::Road<Capsule>, Capsule<int, double>>);
+static_assert(std::same_as<GetParameterTypes<decltype(&Tester::fun_2)>::Road<Capsule>, Capsule<int, double>>);
+static_assert(std::same_as<GetParameterTypes<decltype(&Tester::fun_3)>::Road<Capsule>, Capsule<int, double&>>);
+static_assert(std::same_as<GetParameterTypes<decltype(&Tester::gun_0)>::Road<Capsule>, Capsule<int, double&>>);
+static_assert(std::same_as<GetParameterTypes<decltype(&Tester::gun_1)>::Road<Capsule>, Capsule<int, double&>>);
+static_assert(std::same_as<GetParameterTypes<decltype(&Tester::gun_2)>::Road<Capsule>, Capsule<int, double&>>);
+static_assert(std::same_as<GetParameterTypes<decltype(&Tester::gun_3)>::Road<Capsule>, Capsule<int, double&>>);
+static_assert(std::same_as<GetParameterTypes<decltype(&Tester::gun_4)>::Road<Capsule>, Capsule<int, double&>>);
+static_assert(std::same_as<GetParameterTypes<FO_0>::Road<Capsule>, Capsule<int, double>>);
+static_assert(std::same_as<GetParameterTypes<FO_1>::Road<Capsule>, Capsule<int, double>>);
+static_assert(std::same_as<GetParameterTypes<FO_2>::Road<Capsule>, Capsule<int, double>>);
+static_assert(std::same_as<GetParameterTypes<FO_3>::Road<Capsule>, Capsule<int, double&>>);
+static_assert(std::same_as<GetParameterTypes<FO_4>::Road<Capsule>, Capsule<int, double&>>);
+static_assert(std::same_as<GetParameterTypes<FO_5>::Road<Capsule>, Capsule<int, double&>>);
+static_assert(std::same_as<GetParameterTypes<FO_6>::Road<Capsule>, Capsule<int, double&>>);
+static_assert(std::same_as<GetParameterTypes<FO_7>::Road<Capsule>, Capsule<int, double&>>);
+static_assert(std::same_as<GetParameterTypes<FO_8>::Road<Capsule>, Capsule<int, double&>>);
+static_assert(std::same_as<GetParameterTypes<decltype(Lambda_0)>::Road<Capsule>, Capsule<int, double>>);
+static_assert(std::same_as<GetParameterTypes<decltype(Lambda_1)>::Road<Capsule>, Capsule<int, double>>);
+static_assert(std::same_as<GetParameterTypes<decltype(Lambda_2)>::Road<Capsule>, Capsule<int, double>>);
+static_assert(std::same_as<GetParameterTypes<decltype(Lambda_3)>::Road<Capsule>, Capsule<int, double&>>);
+static_assert(std::same_as<GetParameterTypes<decltype(Lambda_4)>::Road<Capsule>, Capsule<int, double&>>);
 /******************************************************************************************************/
 
 

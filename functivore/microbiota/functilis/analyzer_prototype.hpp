@@ -164,6 +164,30 @@ PTMF = pointer to member function;
 
 
 /******************************************************************************************************/
+#ifdef CONCEPTRODON_FUNCTILIS_ANALYZER_PROTOTYPE_TYPE_SIGNATURE_IDENTIFIER
+#error "CONCEPTRODON_FUNCTILIS_ANALYZER_PROTOTYPE_TYPE_SIGNATURE_IDENTIFIER has already been defined"
+#endif
+
+#define CONCEPTRODON_FUNCTILIS_ANALYZER_PROTOTYPE_TYPE_SIGNATURE_IDENTIFIER   \
+    type_signature
+/******************************************************************************************************/
+
+
+
+
+/******************************************************************************************************/
+#ifdef CONCEPTRODON_FUNCTILIS_ANALYZER_PROTOTYPE_VARIADIC_TYPE_SIGNATURE_IDENTIFIER
+#error "CONCEPTRODON_FUNCTILIS_ANALYZER_PROTOTYPE_VARIADIC_TYPE_SIGNATURE_IDENTIFIER has already been defined"
+#endif
+
+#define CONCEPTRODON_FUNCTILIS_ANALYZER_PROTOTYPE_VARIADIC_TYPE_SIGNATURE_IDENTIFIER   \
+    variadic_type_signature
+/******************************************************************************************************/
+
+
+
+
+/******************************************************************************************************/
 #ifdef CONCEPTRODON_FUNCTILIS_ANALYZER_PROTOTYPE_PARAMETER_IDENTIFIER
 #error "CONCEPTRODON_FUNCTILIS_ANALYZER_PROTOTYPE_PARAMETER_IDENTIFIER has already been defined"
 #endif
@@ -245,6 +269,8 @@ struct CONCEPTRODON_FUNCTILIS_ANALYZER_PROTOTYPE_FUNCTION_NAME
 #undef CONCEPTRODON_FUNCTILIS_ANALYZER_PROTOTYPE_VALUE_IDENTIFIER
 #undef CONCEPTRODON_FUNCTILIS_ANALYZER_PROTOTYPE_RESULT_TYPE_IDENTIFIER
 #undef CONCEPTRODON_FUNCTILIS_ANALYZER_PROTOTYPE_PARAMETER_TYPES_IDENTIFIER
+#undef CONCEPTRODON_FUNCTILIS_ANALYZER_PROTOTYPE_TYPE_SIGNATURE_IDENTIFIER
+#undef CONCEPTRODON_FUNCTILIS_ANALYZER_PROTOTYPE_VARIADIC_TYPE_SIGNATURE_IDENTIFIER
 #undef CONCEPTRODON_FUNCTILIS_ANALYZER_PROTOTYPE_PARAMETER_IDENTIFIER
 #undef CONCEPTRODON_FUNCTILIS_ANALYZER_PROTOTYPE_FUNCTION_NAME
 /******************************************************************************************************/
