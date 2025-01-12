@@ -1,6 +1,6 @@
 # Functivore
 
-A C++ template library for inspecting characteristics of a function signature.
+A C++ template library for inspecting and simplifying function signatures.
 
 ## Prologue
 
